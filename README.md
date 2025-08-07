@@ -2,17 +2,20 @@
 
  This repo consists of a fully locally hosted AI voice assistant that transcribes speech in real time, processes natural conversations with a local LLM, and responds using realistic text-to-speech.
 
- There are 4 main components to this pipeline
+ There are 5 main components to this pipeline
  - Wake Word: Requires an activation word to start pipeline (e.g. "Hey PicoVoice")
  - STT: Transcribes your voice into text
+ - Websearch + RAG: Search the web for info and store info in a RAG
  - LLM: Returns a responce to your prompt
  - TTS: Synthesizes LLM output to speech
 
+
 ![Pipeline Diagram](./images/pipeline.png)
 
+> TODO:
+>  - Polish websearch and RAG
 
 ## Table of Contents
-
 - [Speech to Speech Pipeline](#speech-to-speech-pipeline)
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
@@ -248,6 +251,6 @@ All subsequent runs will take slightly quicker to initialize.
 - [Deathdadev/Orpheus-Speech-PyPi](https://github.com/Deathdadev/Orpheus-Speech-PyPi)
 - [coqui-ai/TTS](https://github.com/coqui-ai/TTS)
 - [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)
-
+- [hexgrad/kokoro](https://github.com/hexgrad/kokoro)
 
 
