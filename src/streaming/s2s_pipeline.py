@@ -69,6 +69,10 @@ def wake_word_stt_worker(
     text = "\n".join([segment.text for segment in text_segments])
     logger.info(text)
     
+    if not text:
+      logger.debug("No command detected")
+      continue
+    
     # command_buffer.seek(0)
     # play_wav_file(command_buffer, logger, interrupt_count)
     
